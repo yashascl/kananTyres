@@ -12,10 +12,12 @@ app.get('/', function (req, res) {
 
 app.get('/login', function (req, res) {
   res.sendFile(path.join(__dirname+'/login.html'));
-})
+});
 
 app.get('/dashboard', function (req, res) {
   res.sendFile(path.join(__dirname+'/dashboard.html'));
-})
+});
  
-app.listen(app.get('port'));
+app.listen(app.get('port'),function(){
+	console.log("port running on:",app.get('port'));
+});
